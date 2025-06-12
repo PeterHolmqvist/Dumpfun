@@ -54,7 +54,8 @@
     </div>
   </div>
 
-  <script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
     const quotes = [
       "Oh please dump on me daddy dev",
       "Rekt is a mindset",
@@ -83,7 +84,9 @@
       current = (current + 1) % memes.length;
       memes[current].classList.add('active');
     }, 5000);
-  </script>
+  });
+</script>
+
 </body>
 </html>
 
