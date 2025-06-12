@@ -62,15 +62,22 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.buy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 .buy-button {
-  display: inline-block;
   background-color: #ff0033;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: 1rem;
+  transition: background 0.2s ease;
 }
 
 .buy-button:hover {
@@ -86,9 +93,12 @@ h1 {
   padding: 0.4rem 1rem;
   border: 1.5px solid #ccc;
   border-radius: 10px;
-  margin-top: 1rem;
   cursor: pointer;
   transition: background 0.2s ease;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .contract:hover {
@@ -125,12 +135,19 @@ h1 {
 }
 
 .links a {
+  display: inline-block;
+  margin: 0 1rem;
   color: #1da1f2;
   text-decoration: none;
-  margin: 0 1rem;
+  font-size: 1.1rem;
+}
+
+.links a i {
+  margin-right: 6px;
 }
 
 .links a:hover {
   text-decoration: underline;
 }
+
 
