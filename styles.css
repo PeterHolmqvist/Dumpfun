@@ -142,13 +142,31 @@ h1 {
   font-size: 1.1rem;
 }
 
-.links a i {
-  margin-right: 6px;
-}
-
 .links a:hover {
   text-decoration: underline;
 }
+
+/* 👇 Meme Gallery Styles */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}
+
+.meme {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.meme.active {
+  display: block;
+}
+
 
 
 
