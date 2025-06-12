@@ -102,4 +102,124 @@ h1 {
   background-color: #ddd;
 }
 
-/* 🗯
+/* 🗯️ Quote Rotator */
+.quote-box {
+  margin: 2rem 0;
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  font-style: italic;
+  color: #ff99cc;
+}
+
+/* ✅ Roadmap Section */
+.roadmap {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 2px solid #ff0033;
+  border-radius: 12px;
+  text-align: left;
+  display: inline-block;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.roadmap h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.roadmap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roadmap li::before {
+  content: '💊 ';
+  margin-right: 5px;
+}
+
+/* 🔗 Social Links with Icons */
+.links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.links a i {
+  font-size: 2.5rem;
+  color: #ff0033;
+}
+
+.links a:hover i {
+  color: #ff3366;
+  transform: scale(1.2);
+}
+
+.links i {
+  pointer-events: none;
+}
+
+/* 🎞 Meme Gallery Carousel */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.meme {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.meme.active {
+  display: block;
+}
+
+/* 📊 Tokenomics Pie Chart */
+.tokenomics {
+  margin: 3rem 0;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.tokenomics h2 {
+  margin-bottom: 1rem;
+}
+
+.pie {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(#ff0033 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 51, 0.4);
+  position: relative;
+}
+
+.pie span {
+  text-align: center;
+  line-height: 1.4;
+  z-index: 1;
+  color: #fff;
+}
