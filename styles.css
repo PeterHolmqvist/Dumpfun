@@ -142,6 +142,9 @@ h1 {
 .links a:hover {
   text-decoration: underline;
 }
+.links i {
+  margin-right: 8px;
+}
 
 /* 🎞 Meme Gallery Styles */
 .carousel {
