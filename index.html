@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./styles.css" />
   <link rel="icon" type="image/png" href="./pill.png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Zzv8GmN0nXfdKkGBZ7kC8w0Pb4Oa2yyl3lQZfDgPYISJcEzh1ATxVmAYDPj1j38HjJ2zHvFEzE5uAw+j+4EqMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="pill-background"></div>
@@ -19,54 +19,6 @@
 
     <div class="buy-section">
       <a class="buy-button" href="https://pump.fun/coin/CYANXouNZ9jGkw2PvWJ2Q5AnKNeoUFQD1JhNdE2Ypump?include-nsfw=true" target="_blank">Buy $DUMP</a>
-      <p class="contract" onclick="copyAddress()">Contract: <span id="contract">CYANXouNZ9jGkw2PvWJ2Q5AnKNeoUFQD1JhNdE2Ypump</span></p>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="quote-box" id="quote-box">
-      <p id="quote">"Oh please dump on me daddy dev"</p>
-    </div>
-
-    <div class="roadmap">
-      <h2>🧻 Roadmap</h2>
-      <ul>
-        <li>✅ Launch token</li>
-        <li>💸 Enter degen mode</li>
-        <li>🧠 Accept dump as destiny</li>
-        <li>🎉 Meme our way to 1000x</li>
-      </ul>
-    </div>
-
-    <div class="links">
-      <a href="https://t.me/Dump_fun_portal" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
-      <a href="https://x.com/Dumpfun_token?t=mrm7iXeZJty-piHCr6l-ag&s=09" target="_blank"><i class="fab fa-twitter"></i> X</a>
-    </div>
-  </div>
-
-  <script>
-    const quotes = [
-      "Oh please dump on me daddy dev",
-      "Rekt is a mindset",
-      "Degen now, apologize never",
-      "Pill swallowed, chart followed",
-      "Get dumped. Stay fun.",
-      "Pump it. Dump it. Fun it."
-    ];
-    let i = 0;
-    setInterval(() => {
-      document.getElementById('quote').innerText = quotes[i % quotes.length];
-      i++;
-    }, 3000);
-
-    function copyAddress() {
-      const text = document.getElementById("contract").innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Contract address copied to clipboard!");
-      });
-    }
-  </script>
-</body>
-</html>
 
 
