@@ -1,163 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/x-icon" href="/pill.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dump.fun - Red Pill, Real Rekt</title>
-
-  <!-- Font Awesome för ikoner -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Inbyggd CSS -->
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .top-section {
-      background-color: white;
-      padding: 2rem 1rem;
-    }
-
-    .red-title {
-      font-size: 2.5rem;
-      color: red;
-      margin: 0;
-    }
-
-    .logo {
-      width: 120px;
-      margin-bottom: 1rem;
-    }
-
-    .tagline {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .buy-button {
-      display: inline-block;
-      background-color: #ff0033;
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .buy-button:hover {
-      background-color: #ff3366;
-    }
-
-    .dark-section {
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 2rem 1rem;
-    }
-
-    .contract-box {
-      display: inline-block;
-      background-color: #2c2c2c;
-      border: 1px solid red;
-      border-radius: 8px;
-      padding: 1rem;
-      color: #fff;
-      cursor: pointer;
-      max-width: 90%;
-      word-break: break-all;
-      margin-bottom: 1rem;
-    }
-
-    .contract-box small {
-      display: block;
-      margin-top: 0.5rem;
-      color: #aaa;
-    }
-
-    .links {
-      margin-top: 1.5rem;
-    }
-
-    .links a {
-      color: #ff0033;
-      font-size: 2rem;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    .links a:hover {
-      color: #ff6666;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        width: 80px;
-      }
-
-      .red-title {
-        font-size: 2rem;
-      }
-
-      .buy-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-
-      .contract-box {
-        font-size: 0.85rem;
-      }
-
-      .links a {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Översta sektionen med vit bakgrund -->
-  <div class="top-section">
+  <div class="background-animation"></div>
+  <div class="container">
     <img src="logo.png" alt="Dump.fun logo" class="logo" />
-    <h1 class="red-title">$DUMP</h1>
-    <p class="tagline">-Dump on me Daddy Dev!.</p>
+    <h1>Dump.fun</h1>
+    <p class="tagline">Buy high. Dump higher.</p>
     <a class="buy-button" href="https://pump.fun/coin/CYANXouNZ9jGkw2PvWJ2Q5AnKNeoUFQD1JhNdE2Ypump?include-nsfw=true" target="_blank">Buy $DUMP</a>
-  </div>
+    <p class="contract">Contract: <span id="contract">CYANXouNZ9jGkw2PvWJ2Q5AnKNeoUFQD1JhNdE2Ypump</span></p>
 
-  <!-- Svart sektion efteråt -->
-  <div class="dark-section">
-    <div class="contract-box" onclick="copyToClipboard()">
-      <p>Contract:</p>
-      <span id="contract">CYANXouNZ9jGkw2PvWJ2Q5AnKNeoUFQD1JhNdE2Ypump</span>
-      <small>(Click to copy)</small>
+    <div class="quote-box" id="quote-box">
+      <p id="quote">"Oh please dump on me daddy dev"</p>
+    </div>
+
+    <div class="roadmap">
+      <h2>🧻 Roadmap</h2>
+      <ul>
+        <li>✅ Launch token</li>
+        <li>💸 Enter degen mode</li>
+        <li>🧠 Accept dump as destiny</li>
+        <li>🎉 Meme our way to 1000x</li>
+      </ul>
     </div>
 
     <div class="links">
-      <a href="https://t.me/Dump_fun_portal" target="_blank" title="Telegram">
-        <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://x.com/Dumpfun_token?t=mrm7iXeZJty-piHCr6l-ag&s=09" target="_blank" title="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
+      <a href="https://t.me/Dump_fun_portal" target="_blank">Telegram</a>
+      <a href="https://x.com/Dumpfun_token?t=mrm7iXeZJty-piHCr6l-ag&s=09" target="_blank">X (Twitter)</a>
     </div>
   </div>
 
-  <!-- JS för kopiering -->
   <script>
-    function copyToClipboard() {
-      const contractText = document.getElementById("contract").innerText;
-      navigator.clipboard.writeText(contractText).then(() => {
-        alert("Contract copied to clipboard!");
-      }).catch(err => {
-        alert("Failed to copy: " + err);
-      });
-    }
+    const quotes = [
+      "Oh please dump on me daddy dev",
+      "Rekt is a mindset",
+      "Degen now, apologize never",
+      "Pill swallowed, chart followed",
+      "Get dumped. Stay fun.",
+      "Pump it. Dump it. Fun it."
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById('quote').innerText = quotes[i % quotes.length];
+      i++;
+    }, 3000);
   </script>
-
 </body>
 </html>
