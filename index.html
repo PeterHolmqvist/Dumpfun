@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,60 +38,67 @@
       </ul>
     </div>
 
-    <!-- 👇 Meme Gallery Section -->
+    <div class="tokenomics">
+      <h2>📊 Tokenomics</h2>
+      <div class="pie">
+        <span>100%<br>DUMP</span>
+      </div>
+    </div>
+
     <div class="meme-gallery">
       <h2>💊 Meme Gallery</h2>
-     <div class="carousel">
-  <img class="meme active" src="memes/meme1.jpg" alt="Dump Meme 1">
-  <img class="meme" src="memes/meme2.jpg" alt="Dump Meme 2">
-  <img class="meme" src="memes/meme3.jpg" alt="Dump Meme 3">
-  <img class="meme" src="memes/meme4.jpg" alt="Dump Meme 4">
-</div>
+      <div class="carousel">
+        <img class="meme active" src="memes/meme1.jpg" alt="Dump Meme 1" />
+        <img class="meme" src="memes/meme2.jpg" alt="Dump Meme 2" />
+        <img class="meme" src="memes/meme3.jpg" alt="Dump Meme 3" />
+        <img class="meme" src="memes/meme4.jpg" alt="Dump Meme 4" />
+      </div>
     </div>
 
     <div class="links">
-  <a href="https://t.me/Dump_fun_portal" target="_blank"><i class="fab fa-telegram"></i></a>
-  <a href="https://x.com/Dumpfun_token?t=mrm7iXeZJty-piHCr6l-ag&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
-</div>
+      <a href="https://t.me/Dump_fun_portal" target="_blank" title="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://x.com/Dumpfun_token" target="_blank" title="X (Twitter)">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
   </div>
 
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const quotes = [
-      "Oh please dump on me daddy dev",
-      "Rekt is a mindset",
-      "Degen now, apologize never",
-      "Pill swallowed, chart followed",
-      "Get dumped. Stay fun.",
-      "Pump it. Dump it. Fun it."
-    ];
-    let i = 0;
-    setInterval(() => {
-      document.getElementById('quote').innerText = quotes[i % quotes.length];
-      i++;
-    }, 3000);
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Quote rotator
+      const quotes = [
+        "Oh please dump on me daddy dev",
+        "Rekt is a mindset",
+        "Degen now, apologize never",
+        "Pill swallowed, chart followed",
+        "Get dumped. Stay fun.",
+        "Pump it. Dump it. Fun it."
+      ];
+      let i = 0;
+      setInterval(() => {
+        document.getElementById('quote').innerText = quotes[i % quotes.length];
+        i++;
+      }, 3000);
 
-    function copyAddress() {
-      const text = document.getElementById("contract").innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Contract address copied to clipboard!");
-      });
-    }
+      // Copy contract address
+      window.copyAddress = function () {
+        const text = document.getElementById("contract").innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Contract address copied to clipboard!");
+        });
+      };
 
-    const memes = document.querySelectorAll('.meme');
-    let current = 0;
-    setInterval(() => {
-      memes[current].classList.remove('active');
-      current = (current + 1) % memes.length;
-      memes[current].classList.add('active');
-    }, 5000);
-  });
-</script>
-
+      // Meme carousel
+      const memes = document.querySelectorAll('.meme');
+      let current = 0;
+      setInterval(() => {
+        memes[current].classList.remove('active');
+        current = (current + 1) % memes.length;
+        memes[current].classList.add('active');
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
