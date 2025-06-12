@@ -133,20 +133,24 @@ h1 {
 
 .links {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .links a {
   display: inline-block;
   margin: 0 1rem;
-  font-size: 2.2rem;           /* Bigger icons */
-  color: #ff0033;              /* Dump.fun red */
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.links a:hover {
-  transform: scale(1.2);       /* Zoom on hover */
-  color: #ff3366;              /* Lighter red on hover */
+.links a i {
+  font-size: 2.5rem;       /* Bigger icon */
+  color: #ff0033;          /* Dump.fun red */
+}
+
+.links a:hover i {
+  color: #ff3366;          /* Slightly lighter red on hover */
+  transform: scale(1.2);   /* Zoom effect */
 }
 
 /* 🎞 Meme Gallery Styles */
