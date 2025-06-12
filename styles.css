@@ -111,10 +111,18 @@ h1 {
   color: #ff99cc;
 }
 
+
 .roadmap {
   margin: 2rem 0;
+  padding: 1.5rem;
+  border: 2px solid #ff0033;       /* Dump.red border */
+  border-radius: 12px;
   text-align: left;
   display: inline-block;
+  background-color: transparent;   /* Keep pills visible */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
 }
 
 .roadmap h2 {
