@@ -7,7 +7,7 @@ body {
   position: relative;
 }
 
-/* 🔄 Animated pills background */
+/* 🔄 Falling Pills Background */
 .pill-background {
   position: fixed;
   top: 0;
@@ -102,90 +102,4 @@ h1 {
   background-color: #ddd;
 }
 
-.quote-box {
-  margin: 2rem 0;
-  background: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  font-style: italic;
-  color: #ff99cc;
-}
-
-
-.roadmap {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  border: 2px solid #ff0033;       /* Dump.red border */
-  border-radius: 12px;
-  text-align: left;
-  display: inline-block;
-  background-color: transparent;   /* Keep pills visible */
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #111;
-}
-
-.roadmap h2 {
-  margin-bottom: 0.5rem;
-}
-
-.roadmap ul {
-  list-style: none;
-  padding: 0;
-}
-
-.roadmap li::before {
-  content: '💊 ';
-  margin-right: 5px;
-}
-
-.links {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.links a {
-  display: inline-block;
-  margin: 0 1rem;
-  text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.links a i {
-  font-size: 2.5rem;       /* Bigger icon */
-  color: #ff0033;          /* Dump.fun red */
-}
-
-.links a:hover i {
-  color: #ff3366;          /* Slightly lighter red on hover */
-  transform: scale(1.2);   /* Zoom effect */
-}
-
-/* 🎞 Meme Gallery Styles */
-.carousel {
-  position: relative;
-  width: 90%;
-  max-width: 600px;
-  margin: 2rem auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-}
-
-/* Hide all memes by default */
-.meme {
-  display: none;
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Show only the one with .active */
-.meme.active {
-  display: block;
-}
-
-
-
-
-
-
+/* 🗯
