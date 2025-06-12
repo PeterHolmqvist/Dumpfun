@@ -131,21 +131,22 @@ h1 {
   margin-right: 5px;
 }
 
+.links {
+  margin-top: 2rem;
+}
+
 .links a {
   display: inline-block;
   margin: 0 1rem;
-  font-size: 2.2rem;        /* Bigger icons */
-  color: #ff0033;           /* Dump.fun red */
+  font-size: 2.2rem;           /* Bigger icons */
+  color: #ff0033;              /* Dump.fun red */
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .links a:hover {
-  transform: scale(1.2);    /* Pop on hover */
-  color: #ff3366;           /* Slightly lighter red */
-}
-.links i {
-  margin-right: 8px;
+  transform: scale(1.2);       /* Zoom on hover */
+  color: #ff3366;              /* Lighter red on hover */
 }
 
 /* 🎞 Meme Gallery Styles */
