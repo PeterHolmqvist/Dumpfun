@@ -1,27 +1,33 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background-color: #111;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #111;
   overflow-x: hidden;
   position: relative;
 }
 
-.background-animation {
+.pill-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(255,0,80,0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
+  pointer-events: none;
+  background-image: url('https://i.imgur.com/mfqE1Ld.png');
+  background-size: 30px;
+  animation: fall 20s linear infinite;
+  opacity: 0.15;
   z-index: 0;
-  animation: pulse 5s infinite ease-in-out;
 }
 
-@keyframes pulse {
-  0%, 100% { background-size: 20px 20px; }
-  50% { background-size: 22px 22px; }
+@keyframes fall {
+  from {
+    background-position: 0 -100%;
+  }
+  to {
+    background-position: 0 100%;
+  }
 }
 
 .container {
@@ -29,6 +35,14 @@ body {
   z-index: 1;
   text-align: center;
   padding: 2rem;
+}
+
+.hero-section {
+  background-color: white;
+  color: black;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -64,7 +78,7 @@ h1 {
 
 .contract {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #555;
   margin-top: 1rem;
 }
 
