@@ -124,6 +124,8 @@ h1 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #111;
+  max-width: 400px;
+  word-wrap: break-word;
 }
 
 .roadmap h2 {
