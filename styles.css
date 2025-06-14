@@ -18,17 +18,17 @@ body {
   border-bottom: 2px solid #111;
   position: relative;
   z-index: 999;
+  white-space: nowrap; /* 👈 THIS keeps it in one line */
 }
 
 .live-banner-track {
-  display: flex;
-  width: max-content;
+  display: inline-flex; /* 👈 INLINE-FLEX fixes row wrapping */
   animation: scrollLoop 20s linear infinite;
 }
 
 .live-banner-text {
   white-space: nowrap;
-  padding-right: 3rem; /* spacing between the two loops */
+  padding-right: 4rem; /* 👈 spacing between loops */
 }
 
 @keyframes scrollLoop {
