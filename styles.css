@@ -24,16 +24,9 @@ body {
 }
 
 .live-banner-track {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
-  animation: scrollLoop 15s linear infinite;
-  min-width: 200%;
-}
-
-.live-banner-text {
-  display: inline-block;
-  padding-right: 2rem;
-  white-space: nowrap;
+  animation: scrollLoop linear infinite;
 }
 
 @keyframes scrollLoop {
