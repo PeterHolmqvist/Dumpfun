@@ -236,16 +236,18 @@ h1 {
 
 @keyframes floatLogo {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
 .logo {
   width: 220px !important;
-  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 1.5rem auto;
-  animation: floatLogo 3s ease-in-out infinite;
+  animation-name: floatLogo;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
