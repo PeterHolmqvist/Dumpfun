@@ -19,22 +19,31 @@ body {
   padding: 0.5rem 0;
   position: relative;
   z-index: 999;
+  white-space: nowrap;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .live-banner-track {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
+  min-width: 200%;
   animation: scrollLoop 20s linear infinite;
 }
 
 .live-banner-text {
   display: inline-block;
+  white-space: nowrap;
   padding-right: 2rem;
 }
-  
+
 @keyframes scrollLoop {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* 🔄 Falling Pills Background */
