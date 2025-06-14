@@ -24,9 +24,9 @@ body {
 .live-banner-text {
   display: inline-block;
   white-space: nowrap;
+  /* padding-left: 100%; ← this line removed */
   min-width: 200%;
-  padding-left: 0%;
-  animation: scrollLeft 15s linear infinite;
+  animation: scrollLeft 20s linear infinite;
 }
 
 @keyframes scrollLeft {
