@@ -8,7 +8,7 @@ body {
 }
 
 .live-banner-wrapper {
-  min-width: 200%;
+  width: 100%;
   overflow: hidden;
   background-color: #ff0033;
   font-family: 'Orbitron', sans-serif;
@@ -21,16 +21,20 @@ body {
   border-bottom: 2px solid #111;
 }
 
-.live-banner-text {
-  display: inline-block;
-  white-space: nowrap;
-  padding-left: 100%;
-  animation: scrollLeft 10s linear infinite;
+.live-banner-track {
+  display: flex;
+  width: fit-content;
+  animation: scrollInfinite 15s linear infinite;
 }
 
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+.live-banner-track span {
+  white-space: nowrap;
+  padding-right: 4rem; /* spacing between repeats */
+}
+  
+@keyframes scrollInfinite {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* 🔄 Falling Pills Background */
