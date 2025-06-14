@@ -23,13 +23,13 @@ body {
 
 .live-banner-track {
   display: flex;
-  width: fit-content;
-  animation: scrollInfinite 15s linear infinite;
+  width: max-content;
+  animation: scrollInfinite 20s linear infinite;
 }
 
-.live-banner-track span {
+.live-banner-content {
   white-space: nowrap;
-  padding-right: 4rem; /* spacing between repeats */
+  padding-right: 4rem;
 }
   
 @keyframes scrollInfinite {
