@@ -22,6 +22,15 @@ body {
   opacity: 0.12;
   z-index: 0;
 }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.logo {
+  animation: float 3s ease-in-out infinite;
+}
 
 @keyframes fall {
   from { background-position: 0 -100%; }
