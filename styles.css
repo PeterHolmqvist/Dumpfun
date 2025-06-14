@@ -44,10 +44,11 @@ body {
 }
 
 .logo {
-  max-width: 200px;
-  width: 100%;
+  width: 220px !important;     /* Force the size */
+  max-width: 100%;             /* Still responsive if smaller screen */
   height: auto;
-  margin-bottom: 1.5rem;
+  display: block;
+  margin: 0 auto 1.5rem auto;  /* Centered */
 }
 
 h1 {
