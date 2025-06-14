@@ -8,8 +8,7 @@ body {
 }
 
 /* 🚨 LIVE BANNER SECTION */
-
-  .live-banner-wrapper {
+.live-banner-wrapper {
   overflow: hidden;
   background-color: #ff0033;
   color: white;
@@ -26,26 +25,22 @@ body {
 
 .live-banner-track {
   display: inline-block;
-  min-width: 100%;
   white-space: nowrap;
   animation: scrollLoop 15s linear infinite;
+  min-width: 200%;
 }
 
 .live-banner-text {
   display: inline-block;
-  padding-right: 4rem;
+  padding-right: 2rem;
   white-space: nowrap;
 }
-  
-@keyframes scrollLoop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
+@keyframes scrollLoop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+  
 /* 🔄 Falling Pills Background */
 .pill-background {
   position: fixed;
