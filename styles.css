@@ -60,6 +60,8 @@ body {
   z-index: 1;
   text-align: center;
   padding: 2rem;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .hero-section {
