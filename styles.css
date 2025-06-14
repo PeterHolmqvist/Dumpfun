@@ -8,30 +8,36 @@ body {
 }
 
 .live-banner-wrapper {
-  width: 100%;
   overflow: hidden;
   background-color: #ff0033;
+  color: white;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
-  color: white;
   padding: 0.5rem 0;
+  border-bottom: 2px solid #111;
   position: relative;
   z-index: 999;
-  border-bottom: 2px solid #111;
+}
+
+.live-banner-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 20s linear infinite;
 }
 
 .live-banner-text {
-  display: inline-block;
   white-space: nowrap;
-  /* padding-left: 100%; ← this line removed */
-  min-width: 200%;
-  animation: scrollLeft 20s linear infinite;
+  padding-right: 3rem; /* spacing between the two loops */
 }
 
-@keyframes scrollLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* 🔄 Falling Pills Background */
