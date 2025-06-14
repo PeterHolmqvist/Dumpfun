@@ -19,30 +19,30 @@ body {
   padding: 0.5rem 0;
   position: relative;
   z-index: 999;
-  white-space: nowrap;
   width: 100vw;
+  white-space: nowrap;
   box-sizing: border-box;
 }
 
 .live-banner-track {
-  display: flex;
+  display: inline-block;
+  min-width: 100%;
   white-space: nowrap;
-  min-width: 200%;
-  animation: scrollLoop 20s linear infinite;
+  animation: scrollLoop 15s linear infinite;
 }
 
 .live-banner-text {
   display: inline-block;
+  padding-right: 4rem;
   white-space: nowrap;
-  padding-right: 2rem;
 }
-
+  
 @keyframes scrollLoop {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
