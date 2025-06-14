@@ -16,24 +16,24 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   padding: 0.5rem 0;
-  border-bottom: 2px solid #111;
   position: relative;
   z-index: 999;
 }
 
-.live-banner-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scrollText 20s linear infinite;
+.live-banner-track {
+  display: flex;                /* ⬅️ Ensures inline layout of spans */
+  white-space: nowrap;         /* ⬅️ Prevents wrapping to second line */
+  animation: scrollLoop 20s linear infinite;
 }
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.live-banner-text {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+@keyframes scrollLoop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* 🔄 Falling Pills Background */
