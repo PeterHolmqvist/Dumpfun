@@ -16,25 +16,24 @@ body {
   font-size: 1.1rem;
   color: white;
   padding: 0.5rem 0;
+  border-bottom: 2px solid #111;
   position: relative;
   z-index: 999;
-  border-bottom: 2px solid #111;
 }
 
 .live-banner-track {
-  display: flex;
-  width: max-content;
-  animation: scrollInfinite 20s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollBanner 20s linear infinite;
 }
 
-.live-banner-content {
-  white-space: nowrap;
-  padding-right: 4rem;
-}
-  
-@keyframes scrollInfinite {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* 🔄 Falling Pills Background */
