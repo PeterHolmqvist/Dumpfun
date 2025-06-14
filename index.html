@@ -76,18 +76,26 @@
 
   <script>
     
-  const track = document.getElementById('liveTrack');
-  const text = track.querySelector('.live-text');
+window.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('liveTrack');
+    const text = track.querySelector('.live-text');
 
-  // Klona texten tills den är bredare än 2x viewport
-  while (track.scrollWidth < window.innerWidth * 2) {
-    const clone = text.cloneNode(true);
-    track.appendChild(clone);
-  }
+    // Dubbelkolla att både track och text hittas
+    if (!track || !text) {
+      console.error("Hittade inte liveTrack eller live-text");
+      return;
+    }
 
-  // Sätt dynamisk varaktighet på animationen beroende på innehåll
-  const scrollTime = track.scrollWidth / 50; // justera hastighet
-  track.style.animationDuration = `${scrollTime}s`;
+    // Duplicera tills den är minst dubbelt så bred som fönstret
+    while (track.scrollWidth < window.innerWidth * 2) {
+      const clone = text.cloneNode(true);
+      track.appendChild(clone);
+    }
+
+    // Sätt animeringens längd beroende på bredden
+    const scrollTime = track.scrollWidth / 50; // t.ex. 50px/sekund
+    track.style.animationDuration = `${scrollTime}s`;
+  });
 
     document.addEventListener("DOMContentLoaded", function () {
       // Quote rotator
