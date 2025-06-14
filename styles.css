@@ -22,20 +22,6 @@ body {
   opacity: 0.12;
   z-index: 0;
 }
-@keyframes floatLogo {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-.logo {
-  width: 220px !important;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  animation: floatLogo 3s ease-in-out infinite;
-}
 
 @keyframes fall {
   from { background-position: 0 -100%; }
@@ -247,3 +233,19 @@ h1 {
   z-index: 1;
   color: #fff;
 }
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.logo {
+  width: 220px !important;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
