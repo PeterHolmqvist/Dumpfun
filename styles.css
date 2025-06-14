@@ -7,7 +7,7 @@ body {
   position: relative;
 }
 
-.live-banner-wrapper {
+.live-banner {
   width: 100%;
   overflow: hidden;
   background-color: #ff0033;
@@ -21,19 +21,15 @@ body {
   z-index: 999;
 }
 
-.live-banner-track {
-  display: inline-block;
+.scrolling-text {
   white-space: nowrap;
-  animation: scrollBanner 20s linear infinite;
+  display: inline-block;
+  animation: ticker 18s linear infinite;
 }
 
-@keyframes scrollBanner {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+@keyframes ticker {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* 🔄 Falling Pills Background */
