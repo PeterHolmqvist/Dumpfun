@@ -8,7 +8,8 @@ body {
 }
 
 /* 🚨 LIVE BANNER SECTION */
-.live-banner-wrapper {
+
+  .live-banner-wrapper {
   overflow: hidden;
   background-color: #ff0033;
   color: white;
@@ -21,8 +22,8 @@ body {
 }
 
 .live-banner-track {
-  display: flex;                /* ⬅️ Ensures inline layout of spans */
-  white-space: nowrap;         /* ⬅️ Prevents wrapping to second line */
+  display: inline-block;
+  white-space: nowrap;
   animation: scrollLoop 20s linear infinite;
 }
 
@@ -30,7 +31,7 @@ body {
   display: inline-block;
   padding-right: 2rem;
 }
-
+  
 @keyframes scrollLoop {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
