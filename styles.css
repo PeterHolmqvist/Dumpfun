@@ -63,19 +63,17 @@ body {
 }
 
 .hero-section {
-  background-color: white;
+  background: transparent;
   color: black;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .logo {
-  width: 220px !important;     /* Force the size */
-  max-width: 100%;             /* Still responsive if smaller screen */
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;  /* Centered */
+  width: 120px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 h1 {
