@@ -75,6 +75,20 @@
   </div>
 
   <script>
+    
+  const track = document.getElementById('liveTrack');
+  const text = track.querySelector('.live-text');
+
+  // Klona texten tills den är bredare än 2x viewport
+  while (track.scrollWidth < window.innerWidth * 2) {
+    const clone = text.cloneNode(true);
+    track.appendChild(clone);
+  }
+
+  // Sätt dynamisk varaktighet på animationen beroende på innehåll
+  const scrollTime = track.scrollWidth / 50; // justera hastighet
+  track.style.animationDuration = `${scrollTime}s`;
+
     document.addEventListener("DOMContentLoaded", function () {
       // Quote rotator
       const quotes = [
