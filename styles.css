@@ -63,11 +63,12 @@ body {
 }
 
 .hero-section {
-  background: transparent;
+  background: transparent !important;
   color: black;
   padding-top: 4rem;
   padding-bottom: 4rem;
   box-shadow: none;
+
 }
 
 .logo {
